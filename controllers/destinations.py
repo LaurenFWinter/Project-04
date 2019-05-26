@@ -1,12 +1,13 @@
 from flask import Blueprint
 from models.Destination import Destination, DestinationSchema
 
+
 # creating a router to this controller
-router = Blueprint(__name__, 'destination')
+router = Blueprint(__name__, 'destinations')
 
 # getting all of the destinations
-@router.route('/destination', methods=['GET'])
+@router.route('/destinations', methods=['GET'])
 def index():
     schema = DestinationSchema(many=True)
-    destination = Destination.select()
-    return schema.dumps(destination)
+    destinations = Destination.select()
+    return schema.dumps(destinations)
