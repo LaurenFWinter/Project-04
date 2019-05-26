@@ -19,4 +19,4 @@ class DestinationSchema(Schema):
     image = fields.Int(required=True)
     description_short = fields.Int(required=True)
     description_long = fields.Int(required=True)
-    map = fields.Int(required=True)
+    map = fields.Str(required=True)
