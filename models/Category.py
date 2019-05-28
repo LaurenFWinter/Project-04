@@ -4,9 +4,9 @@ from marshmallow import Schema, fields
 
 class Category(db.Entity):
     name = Required(str)
-    destinations = Set('Destination')
+    cruises = Set('Cruise')
 
 class CategorySchema(Schema):
     id = fields.Str(dump_only=True)
     name = fields.Str(required=True)
-    destinations = fields.Nested('DestinationSchema', many=True)
+    cruises = fields.Nested('CruiseSchema', many=True)

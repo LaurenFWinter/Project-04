@@ -1,6 +1,6 @@
 from pony.orm import db_session
 from app import db
-from models.Destination import Destination
+from models.Cruise import Cruise
 from models.Category import Category
 
 db.drop_all_tables(with_all_data=True)
@@ -11,35 +11,41 @@ with db_session():
     warmclimate = Category(name='warmclimate')
     coldclimate = Category(name='coldclimate')
 
+    los_angeles = City(name='Los Angeles')
+    hilo = City(name='Hilo')
+    honolulu = City(name='Honolulu')
+    maui = City(name='Maui')
+    kauai = City(name='Kauai')
+    ensenada = City(name='Ensenada')
+    anchorage = City(name='Anchorage')
+    alaska = City(name='Alaska')
+    hubbard_glacier = City(name='Hubbard Glacier')
+    glacier_bay_national_park = City(name='Glacier Bay National Park')
+    skagwa = City(name='Skagwa')
+    juneau = City(name='Juneau')
+    ketchikan = City(name='Ketchikan')
+    vancouver = City(name='Vancouver')
 
-    Destination(
+    Cruise(
         name='Exotic Explorer',
         region='Hawaii',
-        itinerary='tofillin',
-        # itinerary=[Los Angeles, Hilo, Honolulu, Maui, Kauai , Ensenada, Los Angeles],
+        itinerary=[los_angeles, hilo, honolulu, maui, kauai, ensenada, los_angeles],
         image='tofillin',
         description_short="From active volcanoes to coffee farms and beautiful beaches to rich history, there's lots to see and do on the island of Hawaii.",
         description_long='The state of Hawaii derives its name from the name of its largest island, Hawaiʻi. The legendary figure from Hawaiian myth. He is said to have discovered the islands when they were first settled.',
+        # ship=princess,
+        things_to_do='Hicking, snorkling, shopping, dining, drinking'
     )
 
-    Destination(
+    Cruise(
         name='Southern Glacier Cruise',
         region='Southeast Alaska',
-        itinerary='tofillin',
-        # itinerary=[Anchorage, Alaska, Hubbard Glacier, Glacier Bay National Park, Skagwa, Juneau, Ketchikan, Vancouver],
-        image='tofillin',
+        itinerary=[anchorage, alaska, hubbard_glacier, glacier_bay_national_park, skagwa, juneau, ketchikan, vancouver], image='tofillin',
         description_short='It is rugged and wild with glaciers, countless rivers and lakes, majestic mountain peaks, some active volcanoes, and nearly 34,000 miles of tidal shoreline.',
         description_long='Alaska’s unspoiled wildlands provide some of the best wildlife habitat in the country for animals such as eagles, salmon, caribou and grizzly bears. They also provide sustenance for Alaska Natives who have lived off the land for thousands of years.',
+        # ship=princess,
+        things_to_do='Hicking, snorkling, shopping, dining, drinking'
     )
 
-    Destination(
-        name='Southern Glacier Cruise',
-        region='Southeast Alaska',
-        itinerary='tofillin',
-        # itinerary=[Anchorage, Alaska, Hubbard Glacier, Glacier Bay National Park, Skagwa, Juneau, Ketchikan, Vancouver],
-        image='tofillin',
-        description_short='It is rugged and wild with glaciers, countless rivers and lakes, majestic mountain peaks, some active volcanoes, and nearly 34,000 miles of tidal shoreline.',
-        description_long='Alaska’s unspoiled wildlands provide some of the best wildlife habitat in the country for animals such as eagles, salmon, caribou and grizzly bears. They also provide sustenance for Alaska Natives who have lived off the land for thousands of years.',
-    )
 
 db.commit()

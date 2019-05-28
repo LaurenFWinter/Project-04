@@ -1,5 +1,5 @@
 from app import app
-from controllers import destinations, categories
+from controllers import cruises, categories
 
-app.register_blueprint(destinations.router)
+app.register_blueprint(cruises.router)
 app.register_blueprint(categories.router)

@@ -2,7 +2,7 @@ from pony.orm import Required, Set
 from app import db
 from marshmallow import Schema, fields
 
-class Destination(db.Entity):
+class Cruise(db.Entity):
     name = Required(str)
     region = Required(str)
     itinerary = Required(str)
@@ -12,12 +12,12 @@ class Destination(db.Entity):
     categories = Set('Category')
 
 
-class DestinationSchema(Schema):
+class CruiseSchema(Schema):
     id = fields.Int(dump_only=True)
     name = fields.Str(required=True)
     region = fields.Str(required=True)
     itinerary = fields.Str(required=True)
-    image = fields.Int(required=True)
-    description_short = fields.Int(required=True)
-    description_long = fields.Int(required=True)
-    categories = fields.Nested('CategorySchema', many=True, exclude=('destinations', ))
+    image = fields.Str(required=True)
+    description_short = fields.Str(required=True)
+    description_long = fields.Str(required=True)
+    categories = fields.Nested('CategorySchema', many=True, exclude=('cruises', ))
