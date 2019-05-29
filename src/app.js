@@ -1,17 +1,29 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import axios from 'axios'
+import { HashRouter as Router, Switch, Route } from 'react-router-dom'
+
+
+import Home from './components/common/Home'
+import Navbar from './components/common/Navbar'
+// import Login from './components/common/Login'
+// import Register from './components/common/Register'
+
+
+import 'bulma'
+
 
 class App extends React.Component {
 
-  componentDidMount() {
-    axios.get('api/cruises')
-      .then(res => this.setState({ cruises: res.data }))
-  }
-
-  render() {
+  render(){
     return (
-      <h1>Hello World</h1>
+      <Router>
+        <div>
+          <Switch>
+            <Navbar />
+            <Route path="/" component={Home} />
+          </Switch>
+        </div>
+      </Router>
     )
   }
 }

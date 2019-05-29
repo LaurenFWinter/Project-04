@@ -7,7 +7,7 @@ from models.Ship import Ship, ShipSchema
 router = Blueprint(__name__, 'ships')
 
 # getting all of the ships
-@router.route('/ships', methods=['GET'])
+@router.route('/api/ships', methods=['GET'])
 @db_session
 def index():
     schema = ShipSchema(many=True)

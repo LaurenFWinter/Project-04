@@ -4,7 +4,7 @@ from models.City import City, CitySchema
 
 router = Blueprint(__name__, 'cities')
 
-@router.route('/cities', methods=['GET'])
+@router.route('/api/cities', methods=['GET'])
 @db_session
 def index():
 

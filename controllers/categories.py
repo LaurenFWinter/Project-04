@@ -4,7 +4,7 @@ from models.Category import Category, CategorySchema
 
 router = Blueprint(__name__, 'categories')
 
-@router.route('/categories', methods=['GET'])
+@router.route('/api/categories', methods=['GET'])
 @db_session
 def index():
 
