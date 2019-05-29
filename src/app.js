@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom'
 import { HashRouter as Router, Switch, Route } from 'react-router-dom'
 
 
-
+import Register from './components/auth/Register'
 import Navbar from './components/common/Navbar'
 import Home from './components/common/Home'
 // import Login from './components/common/Login'
@@ -23,6 +23,7 @@ class App extends React.Component {
         <div>
           <Navbar />
           <Switch>
+            <Route path="/register" component={Register} />
             <Route path="/" component={Home} />
           </Switch>
         </div>
