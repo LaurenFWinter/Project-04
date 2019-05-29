@@ -9,7 +9,7 @@ from models.Cruise import Cruise, CruiseSchema
 router = Blueprint(__name__, 'cruises')
 
 # getting all of the cruises
-@router.route('/api/cruises', methods=['GET'])
+@router.route('/cruises', methods=['GET'])
 @db_session
 def index():
     schema = CruiseSchema(many=True)

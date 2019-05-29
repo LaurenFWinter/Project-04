@@ -3,10 +3,13 @@ import ReactDOM from 'react-dom'
 import { HashRouter as Router, Switch, Route } from 'react-router-dom'
 
 
-import Home from './components/common/Home'
+
 import Navbar from './components/common/Navbar'
+import Home from './components/common/Home'
 // import Login from './components/common/Login'
 // import Register from './components/common/Register'
+// <Route path="/register" component={Register} />
+// <Route path="/login" component={Login} />
 
 
 import 'bulma'
@@ -15,11 +18,11 @@ import 'bulma'
 class App extends React.Component {
 
   render(){
-    return (
+    return(
       <Router>
         <div>
+          <Navbar />
           <Switch>
-            <Navbar />
             <Route path="/" component={Home} />
           </Switch>
         </div>
