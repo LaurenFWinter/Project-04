@@ -11,3 +11,18 @@ def index():
     schema = CategorySchema(many=True)
     categories = Category.select()
     return schema.dumps(categories)
+
+
+# @router.route('/categories', methods=['POST'])
+# @db_session
+# def create():
+#     schema = CategorySchema()
+#
+#     try:
+#         data = schema.load(request.get_json())
+#         category = Category(**data)
+#         db.commit()
+#     except ValidationError as err:
+#         return jsonify({'message': 'Validation failed', 'errors': err.messages}), 422
+#
+#     return schema.dumps(category), 201
