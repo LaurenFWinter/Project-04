@@ -26,7 +26,7 @@ class Show extends React.Component {
       <section className="section">
         <div className="container">
           <h1 className="title is-1">{this.state.ships.company}</h1>
-          <h1 className="title is-1">{this.state.ships.ship}</h1>
+          <h1 className="title is-1">{this.state.ships.itinerary}</h1>
 
 
         </div>

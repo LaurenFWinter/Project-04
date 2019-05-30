@@ -13,7 +13,7 @@ with db_session():
     warm_climate = Category(name='Warm Climate')
     cold_climate = Category(name='Cold Climate')
 
-    los_angeles = City(name='Los Angeles')
+    los_angeles = City(name='Los Angeles, Hilo, Honolulu, Maui, Kauai, Ensenada, Los Angeles')
     hilo = City(name='Hilo')
     honolulu = City(name='Honolulu')
     maui = City(name='Maui')
@@ -27,6 +27,7 @@ with db_session():
     juneau = City(name='Juneau')
     ketchikan = City(name='Ketchikan')
     vancouver = City(name='Vancouver') #image and lat and long
+    # Melbourne, Victoria, Australia | Sydney, New South Wales, Australia
 
     golden_princess = Ship(image='https://cruiseweb.com/admin/Images/image-gallery/princess-cruises-golden-princess-exterior-02-gallery.jpg', company='Princess Cruise Line', ship='Golden Princess', activities='Princess Book Club, Dancing Classes, Nightclub, Minature Golf, Dance Shows, Hot tubs & Pools, Shopping Center')
     costa_atlatica = Ship(image='https://d23n7ahjfnjotp.cloudfront.net/imgs/mobileheaderipad/ship_391789_deliziosa_1024x416_mobhdr.jpg', company='Costa Cruise Line', ship='Costa Deliziosa', activities='4D Cinema, Casino, Grand Bar with dance floor, Pool deck with retractable glass roofand giant screen, Library, Virtual World, Squok Club, Children’s pool, Theatre on three levels, Disco, Internet Point, Shopping Center')
@@ -43,7 +44,7 @@ with db_session():
     Cruise(
         name='Exotic Explorer',
         region='Hawaii',
-        itinerary=[los_angeles, hilo, honolulu, maui, kauai, ensenada, los_angeles],
+        itinerary=los_angeles,
         image='tofillin',
         description_short="From active volcanoes to coffee farms and beautiful beaches to rich history, there's lots to     see and do on the island of Hawaii.",
         description_long='The state of Hawaii derives its name from the name of its largest island, Hawaiʻi. The legendary figure from Hawaiian myth. He is said to have discovered the islands when they were first settled.',
@@ -55,7 +56,9 @@ with db_session():
     Cruise(
         name='Southern Glacier Cruise',
         region='Southeast Alaska',
-        itinerary=[anchorage, alaska, hubbard_glacier, glacier_bay_national_park, skagwa, juneau, ketchikan, vancouver], image='tofillin',
+        itinerary=los_angeles,
+        # itinerary=[anchorage, alaska, hubbard_glacier, glacier_bay_national_park, skagwa, juneau, ketchikan, vancouver], image='tofillin',
+        image='tofillin',
         description_short='It is rugged and wild with glaciers, countless rivers and lakes, majestic mountain peaks, some active volcanoes, and nearly 34,000 miles of tidal shoreline.',
         description_long='Alaska’s unspoiled wildlands provide some of the best wildlife habitat in the country for animals such as eagles, salmon, caribou and grizzly bears. They also provide sustenance for Alaska Natives who have lived off the land for thousands of years.',
         categories=[cold_climate],
