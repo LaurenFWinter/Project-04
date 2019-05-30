@@ -11,6 +11,7 @@ class Cruise(db.Entity):
     description_long = Required(str)
     categories = Set('Category')
     ship = Required('Ship')
+    # user = Required('User')
 
 
 
@@ -24,3 +25,4 @@ class CruiseSchema(Schema):
     description_long = fields.Str(required=True)
     categories = fields.Nested('CategorySchema', many=True, exclude=('cruises',), dump_only=True)
     ship = fields.Nested('ShipSchema', exclude=('cruises',), dump_only=True)
+    # user = fields.Nested('UserSchema', exclude=('cruises',), dump_only=True)

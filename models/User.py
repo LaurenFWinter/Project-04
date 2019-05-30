@@ -1,7 +1,7 @@
 from datetime import datetime, timedelta
 import bcrypt
 import jwt
-from pony.orm import Required, Set
+from pony.orm import Required
 from marshmallow import Schema, fields, post_load, validates_schema, ValidationError
 from app import db
 from config.environment import secret
@@ -10,7 +10,7 @@ class User(db.Entity):
     username = Required(str, unique=True)
     email = Required(str, unique=True)
     password_hash = Required(str)
-    cruises = Set('Cruise')
+    # cruises = Set('Cruise')
 
     # A function that any `user` can perform
     def is_password_valid(self, plaintext):

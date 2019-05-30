@@ -19,7 +19,7 @@ def index():
 
 
 
-@router.route('/api/cruises', methods=['POST'])
+@router.route('/cruises', methods=['POST'])
 @db_session
 def create():
     schema = CruiseSchema()
@@ -34,7 +34,7 @@ def create():
 
 
 
-@router.route('/api/cruises/<int:cruise_id>',
+@router.route('/cruises/<int:cruise_id>',
     methods=['GET'])
 @db_session
 def show(cruise_id):
@@ -47,7 +47,7 @@ def show(cruise_id):
     return schema.dumps(cruise)
 
 
-@router.route('/api/cruises/<int:cruise_id>', methods=['PUT'])
+@router.route('/cruises/<int:cruise_id>', methods=['PUT'])
 @db_session
 def update(cruise_id):
     schema = CruiseSchema()
@@ -66,7 +66,7 @@ def update(cruise_id):
     return schema.dumps(cruise)
 
 
-@router.route('/api/cruises/<int:cruise_id>', methods=['DELETE'])
+@router.route('/cruises/<int:cruise_id>', methods=['DELETE'])
 @db_session
 def delete(cruise_id):
     cruise = Cruise.get(id=cruise_id)
