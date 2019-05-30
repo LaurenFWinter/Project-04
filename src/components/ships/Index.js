@@ -27,6 +27,7 @@ class Index extends React.Component {
               <div key={ship._id} className="column is-one-quarter-desktop is-one-third-tablet">
                 <Link to={`/ships/${ship.id}`}>
                   <Card {...ship} />
+
                 </Link>
               </div>
             )}

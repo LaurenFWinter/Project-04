@@ -19,6 +19,7 @@ import ShipsShow from './components/ships/Show'
 
 
 import 'bulma'
+import './style.scss'
 
 
 class App extends React.Component {
