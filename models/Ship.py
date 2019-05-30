@@ -3,10 +3,16 @@ from pony.orm import Required, Set
 from marshmallow import Schema, fields
 
 class Ship(db.Entity):
-    name = Required(str)
+    company = Required(str)
+    ship = Required(str)
+    image = Required(str)
+    activities = Required(str)
     cruises = Set('Cruise')
 
 class ShipSchema(Schema):
     id = fields.Str(dump_only=True)
-    name = fields.Str(required=True)
+    company = fields.Str(required=True)
+    ship = fields.Str(required=True)
+    image = fields.Str(required=True)
+    activities = fields.Str(required=True)
     cruises = fields.Nested('CruiseSchema', many=True, exclude=('ship', 'categories'))
