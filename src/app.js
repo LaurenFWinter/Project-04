@@ -7,14 +7,13 @@ import Register from './components/auth/Register'
 import Login from './components/auth/Login'
 import Navbar from './components/common/Navbar'
 import Home from './components/common/Home'
-import CitiesIndex from './components/cities/Index'
-import CitiesShow from './components/cities/Show'
-import ShipsIndex from './components/ships/Index'
-import ShipsShow from './components/ships/Show'
-import ShipsEdit from './components/ships/Edit'
-import CityCategories from './components/categories/Index'
-import CityCategoriesShow from './components/categories/Show'
-import Cruises from './components/cruises/Index'
+import CitiesIndex from './components/cities/CitiesIndex'
+import CitiesShow from './components/cities/CitiesShow'
+import ShipsIndex from './components/ships/ShipsIndex'
+import ShipsShow from './components/ships/ShipsShow'
+import ShipsEdit from './components/ships/ShipsEdit'
+import CategoriesIndex from './components/categories/CategoriesIndex'
+import CategoriesShow from './components/categories/CategoriesShow'
 // import Login from './components/common/Login'
 // import Register from './components/common/Register'
 // <Route path="/register" component={Register} />
@@ -33,9 +32,8 @@ class App extends React.Component {
         <div>
           <Navbar />
           <Switch>
-            <Route path="/cruises" component={Cruises} />
-            <Route path="/categories/:id" component={CityCategoriesShow} />
-            <Route path="/categories" component={CityCategories} />
+            <Route path="/categories/:id" component={CategoriesShow} />
+            <Route path="/categories" component={CategoriesIndex} />
             <Route path="/ships/:id/edit" component={ShipsEdit} />
             <Route path="/ships/:id" component={ShipsShow} />
             <Route path="/ships" component={ShipsIndex} />

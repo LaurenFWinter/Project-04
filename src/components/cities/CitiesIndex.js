@@ -2,19 +2,19 @@ import React from 'react'
 import axios from 'axios'
 import { Link } from 'react-router-dom'
 
-import Card from './Card'
+import CitiesCard from './CitiesCard'
 
 class Index extends React.Component {
   constructor() {
     super()
     this.state = {
-      ships: []
+      cities: []
     }
   }
 
   componentDidMount() {
-    axios('/api/ships')
-      .then(res => this.setState({ ships: res.data }))
+    axios('/api/cities')
+      .then(res => this.setState({ cities: res.data }))
   }
 
 
@@ -23,11 +23,10 @@ class Index extends React.Component {
       <section className="section">
         <div className="container">
           <div className="columns is-multiline">
-            {this.state.ships.map(ship =>
-              <div key={ship._id} className="column is-one-quarter-desktop is-one-third-tablet">
-                <Link to={`/ships/${ship.id}`}>
-                  <Card {...ship} />
-
+            {this.state.cities.map(city =>
+              <div key={city._id} className="column is-one-quarter-desktop is-one-third-tablet">
+                <Link to={`/cities/${city.id}`}>
+                  <CitiesCard {...city} />
                 </Link>
               </div>
             )}

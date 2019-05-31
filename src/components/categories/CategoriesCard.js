@@ -1,6 +1,8 @@
 import React from 'react'
 
 const Card = ({ image, name, descriptionShort  }) => {
+
+  console.log
   return (
 
 
