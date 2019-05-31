@@ -4,6 +4,8 @@ from marshmallow import Schema, fields
 
 class Category(db.Entity):
     name = Required(str)
+    image = Required(str)
+    description_short = Required(str)
     cruises = Set('Cruise')
 
 class CategorySchema(Schema):

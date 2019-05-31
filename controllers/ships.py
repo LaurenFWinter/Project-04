@@ -3,7 +3,7 @@ from pony.orm import db_session
 from app import db
 from marshmallow import ValidationError
 from models.Ship import Ship, ShipSchema
-
+from lib.secure_route import secure_route
 
 # creating a router to this controller
 router = Blueprint(__name__, 'ships')
@@ -20,6 +20,7 @@ def index():
 
 @router.route('/ships', methods=['POST'])
 @db_session
+@secure_route
 def create():
     schema = ShipSchema()
     try:
@@ -48,6 +49,7 @@ def show(ship_id):
 
 @router.route('/ships/<int:ship_id>', methods=['PUT'])
 @db_session
+@secure_route
 def update(ship_id):
     schema = ShipSchema()
     ship = Ship.get(id=ship_id)
@@ -67,6 +69,7 @@ def update(ship_id):
 
 @router.route('/ships/<int:ship_id>', methods=['DELETE'])
 @db_session
+@secure_route
 def delete(ship_id):
     ship = Ship.get(id=ship_id)
 
