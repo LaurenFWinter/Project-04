@@ -13,7 +13,7 @@ class Index extends React.Component {
   }
 
   componentDidMount() {
-    axios('/api/ships')
+    axios.get('/api/ships')
       .then(res => this.setState({ ships: res.data }))
   }
 

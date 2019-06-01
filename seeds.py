@@ -19,7 +19,6 @@ with db_session():
 
 ############## ship data
 
-    golden_princess = Ship(company='Princess Cruise Line', image='https://cruiseweb.com/admin/Images/image-gallery/princess-cruises-golden-princess-exterior-02-gallery.jpg', activities='Princess Book Club, Dancing Classes, Nightclub, Minature Golf, Dance Shows, Hot tubs & Pools, Shopping Center')
 
     costa_atlatica = Ship(company='Costa Cruise Line', image='https://d23n7ahjfnjotp.cloudfront.net/imgs/mobileheaderipad/ship_391789_deliziosa_1024x416_mobhdr.jpg', ship='Costa Deliziosa', activities='4D Cinema, Casino, Grand Bar with dance floor, Pool deck with retractable glass roofand giant screen, Library, Virtual World, Squok Club, Children’s pool, Theatre on three levels, Disco, Internet Point, Shopping Center')
 
@@ -41,7 +40,7 @@ with db_session():
     asia = Category(
     name='Asia',
     description_short='You’ll be blown away by incredible Asia. Imagine luxuriating on an idyllic Thai beach or exploring magical gardens in Japan. You’ll adore shopping in Hong Kong’s bustling markets and sampling delicious delicacies in Vietnam. With so many out-of-this-world experiences, it’s one big adventure.',
-    image='https://www.royalcaribbean.co.uk/assets/images/holiday-destinations/region-module/rccl_regionModule1.jpg',
+    image='https://images.unsplash.com/photo-1513415564515-763d91423bdd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80',
     )
 
     australia = Category(
@@ -116,9 +115,9 @@ with db_session():
 
 ############# cruise data
 
-    cruiseone = Cruise(name='Exotic Explorer', region='Hawaii', image='tofillin', description_short="From active volcanoes to coffee farms and beautiful beaches to rich history, there's lots to see and do on the island of Hawaii.", description_long='The state of Hawaii derives its name from the name of its largest island, Hawaiʻi. The legendary figure from Hawaiian myth. He is said to have discovered the islands when they were first settled.', categories=[southpacific])
+    cruiseone = Cruise(name='Exotic Explorer', region='Hawaii', image='tofillin', description_short="From active volcanoes to coffee farms and beautiful beaches to rich history, there's lots to see and do on the island of Hawaii.", description_long='The state of Hawaii derives its name from the name of its largest island, Hawaiʻi. The legendary figure from Hawaiian myth. He is said to have discovered the islands when they were first settled.', categories=[southpacific], ship=disney_dream)
 
-    cruisetwo = Cruise(name='Southern Glacier Cruise', region='Southeast Alaska', image='tofillin', description_short='It is rugged and wild with glaciers, countless rivers and lakes, majestic mountain peaks, some active volcanoes, and nearly 34,000 miles of tidal shoreline.', description_long='Alaska’s unspoiled wildlands provide some of the best wildlife habitat in the country for animals such as eagles, salmon, caribou and grizzly bears. They also provide sustenance for Alaska Natives who have lived off the land for thousands of years.', categories=[scandinavia])
+    cruisetwo = Cruise(name='Southern Glacier Cruise', region='Southeast Alaska', image='tofillin', description_short='It is rugged and wild with glaciers, countless rivers and lakes, majestic mountain peaks, some active volcanoes, and nearly 34,000 miles of tidal shoreline.', description_long='Alaska’s unspoiled wildlands provide some of the best wildlife habitat in the country for animals such as eagles, salmon, caribou and grizzly bears. They also provide sustenance for Alaska Natives who have lived off the land for thousands of years.', categories=[scandinavia], ship=disney_dream)
 
 
     db.commit()

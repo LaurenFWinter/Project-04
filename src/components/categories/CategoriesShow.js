@@ -9,7 +9,8 @@ class Show extends React.Component {
     super(props)
 
     this.state = {
-      categories: []
+      categories: null,
+      ships: []
     }
 
   }
@@ -22,15 +23,20 @@ class Show extends React.Component {
 
   render() {
     if(!this.state.categories) return null
-
+    console.log(this.state.categories.cruises)
     return (
       <section className="section">
         <div className="container">
-          <h1>Hello</h1>
-          <figure className="image">
-            <img src={this.state.categories.image} alt={name} />
-          </figure>
-          <h3>{this.state.categories.name}</h3>
+          <div>Cruises</div>
+          {this.state.categories.cruises.map(cruise =>
+            <div key={cruise.id}>
+              <h1>{cruise.name}</h1>
+              <p>{cruise.region}</p>
+              <p>{cruise.image}</p>
+              <p>{cruise.description_short}</p>
+              <p>{cruise.description_long}</p>
+            </div>
+          )}
         </div>
       </section>
     )
