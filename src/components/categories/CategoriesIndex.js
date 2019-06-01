@@ -26,7 +26,7 @@ class Index extends React.Component {
           <h1> Where would you like to visit? </h1>
           <div className="columns is-multiline">
             {this.state.categories.map(category =>
-              <div key={category._id} className="column is-one-quarter-desktop is-one-third-tablet">
+              <div key={category._id}>
                 <Link to={`/categories/${category.id}`}>
                   <CategoriesCard {...category} />
                 </Link>

@@ -13,21 +13,22 @@ class Index extends React.Component {
   }
 
   componentDidMount() {
-    axios.get('/api/ships')
+    axios('/api/ships')
       .then(res => this.setState({ ships: res.data }))
   }
 
 
   render() {
+    console.log(this.state.ships)
     return (
       <section className="section">
         <div className="container">
+          <h1> Where would you like to visit? </h1>
           <div className="columns is-multiline">
             {this.state.ships.map(ship =>
               <div key={ship._id} className="column is-one-quarter-desktop is-one-third-tablet">
                 <Link to={`/ships/${ship.id}`}>
                   <ShipsCard {...ship} />
-
                 </Link>
               </div>
             )}
