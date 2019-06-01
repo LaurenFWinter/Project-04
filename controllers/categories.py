@@ -17,7 +17,7 @@ def index():
 @db_session
 def get_categories(category_id):
 
-    schema = CategorySchema(many=True)
+    schema = CategorySchema()
     categories = Category.get(id=category_id)
     return schema.dumps(categories)
 

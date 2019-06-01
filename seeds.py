@@ -116,9 +116,9 @@ with db_session():
 
 ############# cruise data
 
-    cruiseone = Cruise(name='Exotic Explorer', region='Hawaii', image='tofillin', description_short="From active volcanoes to coffee farms and beautiful beaches to rich history, there's lots to see and do on the island of Hawaii.", description_long='The state of Hawaii derives its name from the name of its largest island, Hawaiʻi. The legendary figure from Hawaiian myth. He is said to have discovered the islands when they were first settled.')
+    cruiseone = Cruise(name='Exotic Explorer', region='Hawaii', image='tofillin', description_short="From active volcanoes to coffee farms and beautiful beaches to rich history, there's lots to see and do on the island of Hawaii.", description_long='The state of Hawaii derives its name from the name of its largest island, Hawaiʻi. The legendary figure from Hawaiian myth. He is said to have discovered the islands when they were first settled.', categories=[southpacific])
 
-    cruisetwo = Cruise(name='Southern Glacier Cruise', region='Southeast Alaska', image='tofillin', description_short='It is rugged and wild with glaciers, countless rivers and lakes, majestic mountain peaks, some active volcanoes, and nearly 34,000 miles of tidal shoreline.', description_long='Alaska’s unspoiled wildlands provide some of the best wildlife habitat in the country for animals such as eagles, salmon, caribou and grizzly bears. They also provide sustenance for Alaska Natives who have lived off the land for thousands of years.')
+    cruisetwo = Cruise(name='Southern Glacier Cruise', region='Southeast Alaska', image='tofillin', description_short='It is rugged and wild with glaciers, countless rivers and lakes, majestic mountain peaks, some active volcanoes, and nearly 34,000 miles of tidal shoreline.', description_long='Alaska’s unspoiled wildlands provide some of the best wildlife habitat in the country for animals such as eagles, salmon, caribou and grizzly bears. They also provide sustenance for Alaska Natives who have lived off the land for thousands of years.', categories=[scandinavia])
 
 
-db.commit()
+    db.commit()

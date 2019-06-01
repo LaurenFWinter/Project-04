@@ -1,4 +1,4 @@
-from pony.orm import Required, Optional, Set
+from pony.orm import Required, Set
 from app import db
 from marshmallow import Schema, fields
 
@@ -9,8 +9,8 @@ class Cruise(db.Entity):
     itinerary = Set('City')
     description_short = Required(str)
     description_long = Required(str)
-    category = Set('Category')
-    ship = Optional('Ship')
+    categories = Set('Category')
+    ships = Set('Ship')
 
 
 
@@ -23,4 +23,4 @@ class CruiseSchema(Schema):
     description_short = fields.Str(required=True)
     description_long = fields.Str(required=True)
     categories = fields.Nested('CategorySchema', many=True, exclude=('cruises',), dump_only=True)
-    ship = fields.Nested('ShipSchema', exclude=('cruises',), dump_only=True)
+    ships = fields.Nested('ShipSchema', many=True, exclude=('cruises',), dump_only=True)

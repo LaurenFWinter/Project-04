@@ -8,7 +8,7 @@ class Category(db.Entity):
     name = Required(str)
     image = Required(str)
     description_short = Required(str)
-    ship = Set('Ship')
+    ships = Set('Ship')
     cruises = Set('Cruise')
 
 class CategorySchema(Schema):
