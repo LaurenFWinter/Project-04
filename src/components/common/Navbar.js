@@ -25,7 +25,7 @@ class Navbar extends React.Component {
   }
   render () {
     return (
-      <nav className="navbar is-light">
+      <nav className="navbar is-info">
         <div className="container">
 
           <div className="navbar-brand">
