@@ -39,8 +39,8 @@ with db_session():
 
     asia = Category(
     name='Asia',
-    description_short='You’ll be blown away by incredible Asia. Imagine luxuriating on an idyllic Thai beach or exploring magical gardens in Japan. You’ll adore shopping in Hong Kong’s bustling markets and sampling delicious delicacies in Vietnam. With so many out-of-this-world experiences, it’s one big adventure.',
-    image='https://images.unsplash.com/photo-1513415564515-763d91423bdd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80',
+    image='https://www.royalcaribbean.co.uk/assets/images/holiday-destinations/region-module/rccl_regionModule1.jpg',
+    description_short='You’ll be blown away by incredible Asia. Imagine luxuriating on an idyllic Thai beach or exploring magical gardens in Japan. You’ll adore shopping in Hong Kong’s bustling markets and sampling delicious delicacies in Vietnam. With so many out-of-this-world experiences, it’s one big adventure.'
     )
 
     australia = Category(
