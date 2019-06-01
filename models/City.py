@@ -4,7 +4,6 @@ from marshmallow import Schema, fields
 
 class City(db.Entity):
     name = Required(str)
-    ships = Set('Ship')
 
 class CitySchema(Schema):
     id = fields.Str(dump_only=True)

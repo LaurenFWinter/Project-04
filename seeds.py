@@ -11,7 +11,6 @@ db.create_tables()
 with db_session():
 
 
-############ city data
 
     los_angeles = City(name='Los Angeles, Hilo, Honolulu, Maui, Kauai, Ensenada, Los Angeles')
     anchorage = City(name='Anchorage, Alaska, Hubbard Glacier, Glacier Bay National Park, Skagwa, Juneau, Ketchikan, Vancouver')

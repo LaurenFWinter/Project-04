@@ -9,7 +9,6 @@ const ShipsCard = ({ company, ship, image, activities, itinerary }) => {
       <h3>{company}</h3>
       <h3>{ship}</h3>
       <h3>{activities}</h3>
-      <h3>{itinerary}</h3>
     </div>
   )
 }
