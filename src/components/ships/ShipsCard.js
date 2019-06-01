@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Card = ({ company, ship, image, activities, itinerary }) => {
+const ShipsCard = ({ company, ship, image, activities, itinerary }) => {
   return (
     <div>
       <figure className="image">
@@ -14,4 +14,4 @@ const Card = ({ company, ship, image, activities, itinerary }) => {
   )
 }
 
-export default Card
+export default ShipsCard

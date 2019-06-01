@@ -2,7 +2,7 @@ import React from 'react'
 import axios from 'axios'
 import { Link } from 'react-router-dom'
 
-import ShipCard from './ShipCard'
+import ShipsCard from './ShipsCard'
 
 class Index extends React.Component {
   constructor() {
@@ -26,7 +26,7 @@ class Index extends React.Component {
             {this.state.ships.map(ship =>
               <div key={ship._id} className="column is-one-quarter-desktop is-one-third-tablet">
                 <Link to={`/ships/${ship.id}`}>
-                  <ShipCard {...ship} />
+                  <ShipsCard {...ship} />
 
                 </Link>
               </div>

@@ -1,6 +1,5 @@
 import React from 'react'
 import axios from 'axios'
-import { Link } from 'react-router-dom'
 
 
 class Show extends React.Component {
@@ -26,8 +25,6 @@ class Show extends React.Component {
     return (
       <section className="section">
         <div className="container">
-          <Link to={`/ships/${this.state.ships.id}/edit`} className="button is-primary">Edit</Link>
-          <button className="button is-danger" onClick={this.handleDelete}>Delete</button>
           <figure className="image">
             <img src={this.state.ships.image} alt={name} />
           </figure>

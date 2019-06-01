@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Card = ({ image, name, descriptionShort  }) => {
+const CategoriesCard = ({ image, name, descriptionShort  }) => {
 
   console.log
   return (
@@ -28,4 +28,4 @@ const Card = ({ image, name, descriptionShort  }) => {
   )
 }
 
-export default Card
+export default CategoriesCard

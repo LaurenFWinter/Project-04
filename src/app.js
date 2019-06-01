@@ -14,6 +14,7 @@ import ShipsShow from './components/ships/ShipsShow'
 import ShipsEdit from './components/ships/ShipsEdit'
 import CategoriesIndex from './components/categories/CategoriesIndex'
 import CategoriesShow from './components/categories/CategoriesShow'
+
 // import Login from './components/common/Login'
 // import Register from './components/common/Register'
 // <Route path="/register" component={Register} />

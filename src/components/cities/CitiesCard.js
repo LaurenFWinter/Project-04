@@ -1,9 +1,9 @@
 import React from 'react'
 
-const Card = ({ name }) => {
+const CitiesCard = ({ name }) => {
   return (
 
-    
+
     <div className="card">
       <div className="card-header">
         <h3 className="card-header-title">{name}</h3>
@@ -12,4 +12,4 @@ const Card = ({ name }) => {
   )
 }
 
-export default Card
+export default CitiesCard
