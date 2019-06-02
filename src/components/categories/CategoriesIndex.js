@@ -23,8 +23,8 @@ class Index extends React.Component {
     return (
       <section className="section">
         <div className="container">
-          <h1> Where would you like to visit? </h1>
-          <div className="columns is-multiline">
+          <h1 className="titlemax"> Find your latest cruise.. </h1>
+          <div className="columns">
             {this.state.categories.map(category =>
               <div key={category._id}>
                 <Link to={`/categories/${category.id}`}>

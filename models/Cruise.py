@@ -11,8 +11,6 @@ class Cruise(db.Entity):
     categories = Set('Category')
     ship = Required('Ship')
 
-
-
 class CruiseSchema(Schema):
     id = fields.Int(dump_only=True)
     name = fields.Str(required=True)

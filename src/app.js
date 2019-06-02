@@ -24,7 +24,6 @@ import CategoriesShow from './components/categories/CategoriesShow'
 import 'bulma'
 import './style.scss'
 
-
 class App extends React.Component {
 
   render(){

@@ -29,7 +29,11 @@ class Navbar extends React.Component {
         <div className="container">
 
           <div className="navbar-brand">
-            <Link to="/" className="navbar-item display is-size-4">Project 4</Link>
+            <Link to="/" className="navbar-item">
+              <figure>
+                <img src="../images/logo.jpg" />
+              </figure>
+            </Link>
 
             <div className='navbar-menu'>
 

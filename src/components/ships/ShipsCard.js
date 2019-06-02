@@ -1,6 +1,6 @@
 import React from 'react'
 
-const ShipsCard = ({ company, ship, image, activities, itinerary }) => {
+const ShipsCard = ({ company, ship, image, activities }) => {
   return (
     <div>
       <figure className="image">
