@@ -27,12 +27,14 @@ class Show extends React.Component {
     return (
       <section className="section">
         <div className="container">
-          <div>Cruises</div>
+          <h1 className="titlemax">Cruise Holidays</h1>
           {this.state.categories.cruises.map(cruise =>
             <div key={cruise.id}>
-              <h1>{cruise.name}</h1>
+              <h1 className="subheading">{cruise.name}</h1>
               <p>{cruise.region}</p>
-              <p>{cruise.image}</p>
+              <figure className="image">
+                <img src={cruise.image} alt={name} />
+              </figure>
               <p>{cruise.description_short}</p>
               <p>{cruise.description_long}</p>
             </div>

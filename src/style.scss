@@ -1,6 +1,44 @@
+// writing for titles on categories index and ships index
 .titlemax {
   font-size: 100px;
   height:200px;
   margin: auto;
   font-family: 'Arima Madurai', cursive;
+}
+
+.subheading {
+  font-size: 50px;
+  height:100px;
+  margin: auto;
+  font-family: 'Arima Madurai', cursive;
+  margin: auto;
+
+}
+
+p {
+  font-family: 'Arima Madurai', cursive;
+  font-size: 20px;
+}
+// flex borders on categories index
+.section {
+  display: flex;
+}
+.display {
+  padding-left: 10px;
+  width: 500px;
+  flex-wrap: wrap;
+  display: inline-flex;
+}
+
+.hello {
+  position: relative;
+  text-align: center;
+  color: white;
+}
+
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }

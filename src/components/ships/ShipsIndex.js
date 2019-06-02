@@ -23,7 +23,10 @@ class Index extends React.Component {
     return (
       <section className="section">
         <div className="container">
-          <h1> Where would you like to visit? </h1>
+          <figure className="image">
+            <img src='https://media.mnn.com/assets/images/2018/02/cruise-ship-sunset-ss.jpg.838x0_q80.jpg' alt='ship' />
+          </figure>
+          <h1 className="titlemax"> Find the perfect Cruise Ship.. </h1>
           <div className="columns is-multiline">
             {this.state.ships.map(ship =>
               <div key={ship._id} className="column is-one-quarter-desktop is-one-third-tablet">
