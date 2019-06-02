@@ -14,6 +14,8 @@ import ShipsShow from './components/ships/ShipsShow'
 import ShipsEdit from './components/ships/ShipsEdit'
 import CategoriesIndex from './components/categories/CategoriesIndex'
 import CategoriesShow from './components/categories/CategoriesShow'
+import WishlistEdit from './components/categories/WishlistEdit'
+import Wishlist from './components/categories/Wishlist'
 
 // import Login from './components/common/Login'
 // import Register from './components/common/Register'
@@ -32,6 +34,8 @@ class App extends React.Component {
         <div>
           <Navbar />
           <Switch>
+            <Route path="/categories/Wishlist" component={Wishlist} />
+            <Route path="/categories/:id/edit" component={WishlistEdit} />
             <Route path="/categories/:id" component={CategoriesShow} />
             <Route path="/categories" component={CategoriesIndex} />
             <Route path="/ships/:id/edit" component={ShipsEdit} />

@@ -44,6 +44,7 @@ class Navbar extends React.Component {
                 <Link to="/ships" className="navbar-item">Ships</Link>
                 <Link to="/cities" className="navbar-item">Cities</Link>
                 <Link to="/categories" className="navbar-item">Categories</Link>
+                <Link to="/categories/3/edit" className="navbar-item">Wishlist</Link>
               </div>
             </div>
           </div>
