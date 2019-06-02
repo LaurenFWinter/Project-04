@@ -12,12 +12,6 @@ with db_session():
 
 
 
-    hong_kong1 = City(name='Hong Kong, Chan Ma, Hong Kong')
-    syndey2 = City(name='Sydney, Newcastle, Airlie Beach, Cairns, Darwin, Benoa, Port Hedland, Geraldton, Perth')
-    tianjin3 = City(name='Tianjin, Fukuoka, Tianjin')
-    singapore4 = City(name='Singapore Malacca, Malaysia Penang, Malaysia Phuket, Thailand Singapore')
-    thailand5 = City(name='Singapore, Laemchabang, Ho Chi Minh (Phu My), Nha Trang, Hue/Danang (Chan May), Hong Kong')
-
 ############## ship data
 
     adventure_of_the_seas = Ship(company='Royal Caribbean', ship='Adventure of the Seas', image='https://images.cruisecritic.com/image/5441/image_1000x_43.jpg', activities='4D Cinema, Casino, Grand Bar with dance floor, Pool deck with retractable glass roofand giant screen, Library, Virtual World, Squok Club, Children’s pool, Theatre on three levels, Disco, Internet Point, Shopping Center')
@@ -135,6 +129,63 @@ with db_session():
     description_short='Who doesn’t dream of a paradise island in the South Pacific, with swaying palm trees and beaches of pure white sand? There’s a world of wonder beneath too, in the vibrant coral reefs teeming with colourful fish. Grab a snorkel and explore.',
     image='https://www.royalcaribbean.co.uk/assets/images/holiday-destinations/region-module/rccl_regionModule12.jpg',
     )
+
+############# city data
+
+    city1 = City(name='Hong Kong, Chan Ma, Hong Kong')
+    city2 = City(name='Sydney, Newcastle, Airlie Beach, Cairns, Darwin, Benoa, Port Hedland, Geraldton, Perth')
+    city3 = City(name='Tianjin, Fukuoka, Tianjin')
+    city4 = City(name='Singapore, Malacca, Penang, Phuket, Thailand')
+    city5 = City(name='Singapore, Laemchabang, Ho Chi Minh (Phu My), Nha Trang, Hue/Danang (Chan May), Hong Kong')
+    city6 = City(name='Sydney, Sydney')
+    city7 = City(name='Sydney, Noumea, Mystery Island, Bay Of Islands, Sydney')
+    city8 = City(name='Sydney, Noumea, Mystery Island, Vila, Lifou, Sydney')
+    city9 = City(name='Sydney, Port Arthur, Hobart, Hobart, Sydney')
+    city10 = City(name='Fort Lauderdale, Perfect Day CocoCay, Cozumel, Fort Lauderdale')
+    city11 = City(name='Fort Lauderdale, Labadee, Nassau, Fort Lauderdale')
+    city12 = City(name='Fort Lauderdale, Key West, Nassau, Fort Lauderdale')
+    city13 = City(name='Tampa, Kings Wharf, Ponta Delgada, Málaga, Alicante, Barcelona')
+    city14 = City(name='Cape Liberty, Kings Wharf, Kings Wharf, Cape Liberty')
+    city15 = City(name='Copenhagen, Geiranger, Arctic Circle,Tromso, Honningsvåg, Alesund, Flâm, Stavanger, Copenhagen')
+    city16 = City(name='Stockholm, Stockholm, Helsinki, St. Petersburg, St. Petersburg, St. Petersburg, Tallinn, Riga, Visby, Berlin, Fredericia, Copenhagen, Copenhagen')
+    city17 = City(name='Amsterdam, Skagen, Tallinn, St. Petersburg, St. Petersburg, Helsinki, Stockholm, Copenhagen, Amsterdam')
+    city18 = City(name='Southampton, Bruges, Oslo, Hamburg, Paris/Normandy, Southampton')
+    city19 = City(name='San Juan, Oranjestad, Willemstad, Kralendijk, Philipsburg, San Juan')
+    city20 = City(name="San Juan, St. John's, Castries, Bridgetown, San Juan")
+    city21 = City(name='Miami, George Town, Cienfuegos, Havana, Miami')
+    city22 = City(name='Miami, Philipsburg, San Juan, Labadee, Miami')
+    city23 = City(name="San Juan, Bridgetown, St. George's, Roseau, Philipsburg, Charlotte Amalie, San Juan")
+    city24 = City(name="Baltimore, St. Croix, Philipsburg, Castries, Bridgetown, Basseterre, Baltimore")
+    city25 = City(name='Southampton, La Coruña, Madeira, Tenerife, Gran Canaria, Lisbon, Vigo, Southampton')
+    city26 = City(name='Shanghai, Vladivostok, Kyoto, Fukuoka, Shanghai')
+    city27 = City(name='Southampton, Gibraltar, Alicante, Barcelona, Marseille, Lisbon, Cherbourg, Southampton')
+    city28 = City(name='Barcelona, Nice, Portofino, Florence/Pisa, Rome, Amalfi Coast, Barcelona')
+    city29 = City(name='Copenhagen, Berlin, Tallinn, St. Petersburg, St. Petersburg, Helsinki, Visby, Riga, Stockholm, Stockholm')
+    city30 = City(name='Rome, Messina, Valletta, Mykonos, Kusadasi, Santorini, Athens, Naples, Rome')
+    city31 = City(name='Southampton, Ponta Delgada, Madeira, Gran Canaria, Tenerife, Lanzarote, Lisbon, Southampton')
+    city32 = City(name='Fort Lauderdale, Málaga, Barcelona')
+    city33 = City(name='Rome, Messina, Athens, Santorini, Suez Canal, Suez Canal, Aqaba, Muscat, Dubai, Dubai')
+    city34 = City(name='Barcelona, Kotor, Zadar, Venice, Venice, Naples, Rome, Florence/Pisa, Marseille, Barcelona')
+    city35 = City(name='Southampton, Paris/Normandy, Bilbao, Southampton')
+    city36 = City(name='Venice, Kotor, Dubrovnik, Santorini, Katakolon')
+    city37 = City(name='Rome, Naples, Valencia, Barcelona, Provence, Florence/Pisa, Rome')
+    city38 = City(name='Dubai, Doha, Bahrain, Sir Bani Yas, Abu Dhabi, Dubai, Dubai')
+    city39 = City(name='Dubai, Dubai, Bahrain, Doha, Sir Bani Yas, Khasab, Muscat, Abu Dhabi')
+    city40 = City(name='Dubai, Dubai, Bahrain, Doha, Sir Bani Yas, Khasab, Muscat, Abu Dhabi, Dubai')
+    city41 = City(name='Dubai, Dubai, Abu Dhabi, Sir Bani Yas, Oman Dubai, Dubai')
+    city42 = City(name='Vancouver, Ketchikan, Vancouver')
+    city43 = City(name='Cape Liberty, Bar Harbor, Saint John, Halifax, Cape Liberty')
+    city44 = City(name='Honolulu, Lahaina, Kailua Kona, Hilo, Kauai, Vancouver')
+    city45 = City(name='Southampton, Bergen, Flâm, Geiranger, Alesund, Stavanger, Southampton')
+    city46 = City(name='Sydney, Isle of Pines, Mystery Island, Vila, Suva, Lautoka, Sydney')
+    city47 = City(name='Honolulu, Papeete, Moorea, Bora Bora, Auckland, Bay of Islands, Sydney')
+    city48 = City(name='Brisbane, Noumea, Lifou, Vila, Mystery Island, Brisbane')
+    city49 = City(name='Brisbane, Isle of Pines, Mystery Island, Vila, Brisbane')
+    city50 = City(name='Brisbane, Mystery Island, Luganville, Vila, Noumea, Brisbane')
+    # Denmark
+    # finland
+    # sweden
+
 
 ############# cruise data
 
