@@ -55,7 +55,7 @@ imgship {
 }
 
 .title1 {
-  font-size: 150px;
+  font-size: 100px;
   font-family: 'Arima Madurai', cursive;
   color: white;
   text-shadow: 5px 5px black;
@@ -80,4 +80,13 @@ imgship {
   display: flex;
 //   width: 25%;
 //   max-height: 200px;
+}
+
+.herobody {
+  margin-bottom: 150px;
+}
+
+.padd1 {
+  padding-left: 70px;
+  padding-right: 70px;
 }

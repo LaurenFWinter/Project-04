@@ -2,7 +2,6 @@ import React from 'react'
 
 const CruisesCard = ({ name, image }) => {
   return (
-
     <div>
       <figure className="image">
         <img src={image} alt={name} />
@@ -11,6 +10,5 @@ const CruisesCard = ({ name, image }) => {
     </div>
   )
 }
-
 
 export default CruisesCard

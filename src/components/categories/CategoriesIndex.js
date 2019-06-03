@@ -21,7 +21,7 @@ class Index extends React.Component {
   render() {
     console.log(this.state.categories)
     return (
-      <section className="hero is-small">
+      <section className="hero is-large">
         <div className="hero-body hero-image" style={{ backgroundImage: 'url(https://www.virginholidays.co.uk/.imaging/Phone/dam/d045c975-c6fc-4768-b59d-576052da215a.jpg)' }}>
           <div className="container">
             <div>
@@ -34,7 +34,7 @@ class Index extends React.Component {
           <div className="container">
             <div className="columns is-multiline">
               {this.state.categories.map(category =>
-                <div className="hello" key={category._id}>
+                <div className="hello" key={category.id}>
                   <Link to={`/categories/${category.id}`}>
                     <CategoriesCard {...category} />
                   </Link>

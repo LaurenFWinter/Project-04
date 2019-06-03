@@ -1,5 +1,6 @@
 import React from 'react'
 import axios from 'axios'
+import { Link } from 'react-router-dom'
 
 
 
@@ -25,18 +26,29 @@ class CategoriesShow extends React.Component {
     if(!this.state.categories) return null
     console.log(this.state.categories.cruises)
     return (
+
+
       <section className="section">
         <div className="container">
           <h1 className="titlemax">Cruise Holidays</h1>
           {this.state.categories.cruises.map(cruise =>
             <div key={cruise.id}>
-              <h1 className="subheading">{cruise.name}</h1>
-              <p>{cruise.region}</p>
-              <figure className="image">
-                <img src={cruise.image} alt={name} />
-              </figure>
-              <p>{cruise.descriptionshort}</p>
-              <p>{cruise.descriptionlong}</p>
+              <div className="columns">
+                <div className="column">
+                  <Link to={'/cities/:id'}>
+                    <figure className="image">
+                      <img src={cruise.image} alt={name} />
+                    </figure>
+                  </Link>
+                </div>
+                <div className="column">
+
+
+                  <h1 className="subheading">{cruise.name}</h1>
+                  <p>{cruise.region}</p>
+                  <p>{cruise.descriptionlong}</p>
+                </div>
+              </div>
             </div>
           )}
         </div>
@@ -44,6 +56,5 @@ class CategoriesShow extends React.Component {
     )
   }
 }
-
 
 export default CategoriesShow

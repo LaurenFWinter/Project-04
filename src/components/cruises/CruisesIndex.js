@@ -13,35 +13,31 @@ class CruisesIndex extends React.Component {
   }
 
   componentDidMount() {
-    axios('/api/cruises')
+    axios.get('/api/cruises')
       .then(res => this.setState({ cruises: res.data }))
   }
 
 
   render() {
+    if(!this.state.cruises) return null
+    console.log(this.state.cruises)
     return (
-
-      <section className="section">
-        <div className="container">
-          <div className="hero is-large">
-            <div className="hero-body hero-image" style={{ backgroundImage: 'url(https://www.telegraph.co.uk/content/dam/Travel/Cruise/cruise-ship-beach-xlarge.jpg)' }}>
-              <div className="container">
-                <div>
-                  <h1 className="title2">Cruise Destinations</h1>
-                </div>
-              </div>
+      <section className="hero is-large">
+        <div className="hero-body hero-image herobody" style={{ backgroundImage: 'url(../images/cruise-index-image.jpg)'}}>
+          <div className="container">
+            <div>
+              <h1 className="title1">Find your perfect Cruise..</h1>
             </div>
           </div>
-
-          <div className="columns is-multiline">
-            {this.state.cruises.map(cruise =>
-              <div key={cruise._id} className="column is-one-third-desktop">
-                <Link to={`/cruises/${cruise.id}`}>
-                  <CruisesCard {...cruise} />
-                </Link>
-              </div>
-            )}
-          </div>
+        </div>
+        <div className="columns is-multiline padd1">
+          {this.state.cruises.map(cruise =>
+            <div key={cruise.id} className="column is-one-third-desktop">
+              <Link to={`/cruises/${cruise.id}`}>
+                <CruisesCard {...cruise} />
+              </Link>
+            </div>
+          )}
         </div>
       </section>
     )

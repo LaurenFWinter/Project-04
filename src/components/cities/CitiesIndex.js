@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 
 import CitiesCard from './CitiesCard'
 
-class Index extends React.Component {
+class CitiesIndex extends React.Component {
   constructor() {
     super()
     this.state = {
@@ -24,7 +24,7 @@ class Index extends React.Component {
         <div className="container">
           <div className="columns is-multiline">
             {this.state.cities.map(city =>
-              <div key={city._id} className="column is-one-quarter-desktop is-one-third-tablet">
+              <div key={city.id} className="column is-one-quarter-desktop is-one-third-tablet">
                 <Link to={`/cities/${city.id}`}>
                   <CitiesCard {...city} />
                 </Link>
@@ -39,4 +39,4 @@ class Index extends React.Component {
 
 
 
-export default Index
+export default CitiesIndex
