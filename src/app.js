@@ -17,6 +17,8 @@ import CategoriesShow from './components/categories/CategoriesShow'
 import WishlistEdit from './components/categories/WishlistEdit'
 import Wishlist from './components/categories/Wishlist'
 import Loginpage from './components/common/LoginPage'
+import CruisesIndex from './components/cruises/CruisesIndex'
+import CruisesShow from './components/cruises/CruisesShow'
 
 // import Login from './components/common/Login'
 // import Register from './components/common/Register'
@@ -35,6 +37,8 @@ class App extends React.Component {
         <div>
           <Navbar />
           <Switch>
+            <Route path="/cruises/:id" component={CruisesShow} />
+            <Route path="/cruises" component={CruisesIndex} />
             <Route path="/categories/Wishlist" component={Wishlist} />
             <Route path="/categories/:id/edit" component={WishlistEdit} />
             <Route path="/categories/:id" component={CategoriesShow} />

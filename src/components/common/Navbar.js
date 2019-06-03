@@ -25,7 +25,7 @@ class Navbar extends React.Component {
   }
   render () {
     return (
-      <nav className="navbar is-info">
+      <nav className="navbar is-light">
         <div className="container">
 
           <div className="navbar-brand">
@@ -36,12 +36,13 @@ class Navbar extends React.Component {
             </Link>
 
             <div className='navbar-menu'>
-              <Link to="/register" className="navbar-item">Register</Link>
-              <Link to="/login" className="navbar-item">Login</Link>
+              {!Auth.isAuthenticated() && <Link to="/register" className="navbar-item">Register</Link>}
+              {!Auth.isAuthenticated() && <Link to="/login" className="navbar-item">Login</Link>}
               {Auth.isAuthenticated() && <Link to="/ships" className="navbar-item">Ships</Link>}
               {Auth.isAuthenticated() && <Link to="/cities" className="navbar-item">Cities</Link>}
               {Auth.isAuthenticated() && <Link to="/categories" className="navbar-item">Categories</Link>}
               {Auth.isAuthenticated() && <Link to="/categories/3/edit" className="navbar-item">Wishlist</Link>}
+              {Auth.isAuthenticated() && <Link to="/cruises" className="navbar-item">Cruises</Link>}
 
               <div className="navbar-end">
 
