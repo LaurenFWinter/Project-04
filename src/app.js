@@ -16,6 +16,7 @@ import CategoriesIndex from './components/categories/CategoriesIndex'
 import CategoriesShow from './components/categories/CategoriesShow'
 import WishlistEdit from './components/categories/WishlistEdit'
 import Wishlist from './components/categories/Wishlist'
+import Loginpage from './components/common/LoginPage'
 
 // import Login from './components/common/Login'
 // import Register from './components/common/Register'
@@ -43,6 +44,7 @@ class App extends React.Component {
             <Route path="/ships" component={ShipsIndex} />
             <Route path="/cities/:id" component={CitiesShow} />
             <Route path="/cities" component={CitiesIndex} />
+            <Route path="/Loginpage" component={Loginpage} />
             <Route path="/login" component={Login} />
             <Route path="/register" component={Register} />
             <Route path="/" component={Home} />

@@ -2,7 +2,7 @@ import React from 'react'
 
 const CategoriesCard = ({ image, name  }) => {
   return (
-    <div>
+    <div className="hello">
       <figure className="image">
         <img src={image} alt={name} />
       </figure>

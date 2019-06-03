@@ -29,7 +29,7 @@ class Index extends React.Component {
           <h1 className="titlemax"> Find your perfect Cruise Ship.. </h1>
           <div className="columns is-multiline">
             {this.state.ships.map(ship =>
-              <div key={ship._id} className="column is-one-quarter-desktop is-one-third-tablet">
+              <div key={ship._id} className="column is-one-third-desktop">
                 <Link to={`/ships/${ship.id}`}>
                   <ShipsCard {...ship} />
                 </Link>

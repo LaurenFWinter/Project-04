@@ -1,4 +1,10 @@
 // writing for titles on categories index and ships index
+
+.hero-image {
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
 .titlemax {
   font-size: 90px;
   height:200px;
@@ -28,4 +34,22 @@ p {
   width: 500px;
   flex-wrap: wrap;
   display: inline-flex;
+}
+
+.hello {
+  padding: 25px;
+}
+
+h3 {
+  font-size: 30px;
+  font-family: 'Arima Madurai', cursive;
+  color: black;
+}
+h4 {
+  font-family: 'Arima Madurai', cursive;
+  color: black;
+}
+
+imgship {
+  max-width:300px;
 }

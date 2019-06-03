@@ -24,9 +24,9 @@ class Index extends React.Component {
       <section className="section">
         <div className="container">
           <h1 className="titlemax"> Find your latest cruise.. </h1>
-          <div className="columns">
+          <div className="columns is-multiline">
             {this.state.categories.map(category =>
-              <div key={category._id}>
+              <div className="hello" key={category._id}>
                 <Link to={`/categories/${category.id}`}>
                   <CategoriesCard {...category} />
                 </Link>

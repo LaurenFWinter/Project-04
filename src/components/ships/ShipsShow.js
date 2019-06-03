@@ -26,7 +26,7 @@ class Show extends React.Component {
       <section className="section">
         <div className="container">
           <figure className="image">
-            <img src={this.state.ships.image} alt={name} />
+            <img className="imgship" src={this.state.ships.image} alt={name} />
           </figure>
           <h3>{this.state.ships.company}</h3>
           <h3>{this.state.ships.ship}</h3>
