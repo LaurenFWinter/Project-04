@@ -7,7 +7,7 @@ from models.Ship import ShipSchema
 class Category(db.Entity):
     name = Required(str)
     image = Required(str)
-    description_short = Required(str)
+    descriptionshort = Required(str)
     ships = Set('Ship')
     cruises = Set('Cruise')
 

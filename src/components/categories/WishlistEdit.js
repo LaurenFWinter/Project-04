@@ -111,12 +111,12 @@ class WishlistEdit extends React.Component {
                   <div className="control">
                     <textarea
                       className="textarea"
-                      name="description_short"
+                      name="descriptionshort"
                       placeholder="eg: Picture yourself on beautiful stretches of pure white sand, beside turquoise waters filled with tropical fish, listening to calypso rhythms under sun-soaked skies."
                       onChange={this.handleChange}
                     />
                   </div>
-                  {this.state.errors.description_short && <div className="help is-danger">{this.state.errors.description_short}</div>}
+                  {this.state.errors.descriptionshort && <div className="help is-danger">{this.state.errors.descriptionshort}</div>}
                 </div>
 
                 <div className="field">

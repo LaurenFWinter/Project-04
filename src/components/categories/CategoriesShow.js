@@ -3,7 +3,7 @@ import axios from 'axios'
 
 
 
-class Show extends React.Component {
+class CategoriesShow extends React.Component {
 
   constructor(props) {
     super(props)
@@ -35,8 +35,8 @@ class Show extends React.Component {
               <figure className="image">
                 <img src={cruise.image} alt={name} />
               </figure>
-              <p>{cruise.description_short}</p>
-              <p>{cruise.description_long}</p>
+              <p>{cruise.descriptionshort}</p>
+              <p>{cruise.descriptionlong}</p>
             </div>
           )}
         </div>
@@ -46,4 +46,4 @@ class Show extends React.Component {
 }
 
 
-export default Show
+export default CategoriesShow

@@ -1,15 +1,16 @@
 import React from 'react'
 
-const CruisesCard = ({ name }) => {
+const CruisesCard = ({ name, image }) => {
   return (
 
-
-    <div className="card">
-      <div className="card-header">
-        <h3 className="card-header-title">{name}</h3>
-      </div>
+    <div>
+      <figure className="image">
+        <img src={image} alt={name} />
+      </figure>
+      <h3 className="fontsize">{name}</h3>
     </div>
   )
 }
+
 
 export default CruisesCard

@@ -21,19 +21,28 @@ class Index extends React.Component {
   render() {
     console.log(this.state.categories)
     return (
-      <section className="section">
-        <div className="container">
-          <h1 className="titlemax"> Find your latest cruise.. </h1>
-          <div className="columns is-multiline">
-            {this.state.categories.map(category =>
-              <div className="hello" key={category._id}>
-                <Link to={`/categories/${category.id}`}>
-                  <CategoriesCard {...category} />
-                </Link>
-              </div>
-            )}
+      <section className="hero is-small">
+        <div className="hero-body hero-image" style={{ backgroundImage: 'url(https://www.virginholidays.co.uk/.imaging/Phone/dam/d045c975-c6fc-4768-b59d-576052da215a.jpg)' }}>
+          <div className="container">
+            <div>
+              <h1 className="title1">Our Destinations</h1>
+              <h1 className="title2">Find your perfect cruise</h1>
+            </div>
           </div>
         </div>
+        <section className="section">
+          <div className="container">
+            <div className="columns is-multiline">
+              {this.state.categories.map(category =>
+                <div className="hello" key={category._id}>
+                  <Link to={`/categories/${category.id}`}>
+                    <CategoriesCard {...category} />
+                  </Link>
+                </div>
+              )}
+            </div>
+          </div>
+        </section>
       </section>
     )
   }

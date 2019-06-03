@@ -23,30 +23,28 @@ const Loginpage = () => {
           </div>
         </div>
       </div>
-      <container>
-        <div className="imagesLoginpage">
+      <div className="imagesLoginpage">
+        <figure>
+          <Link to={'/cruises'}>
+            <img src="images/route.jpg" alt="route" />
+          </Link>
+        </figure>
+        <Link to={'/categories'}>
           <figure>
-            <Link to={'/cruises'}>
-              <img src="images/route.jpg" alt="route" />
-            </Link>
+            <img src="https://www.royalcaribbean.co.uk/assets/images/holiday-destinations/region-module/rccl_regionModule9.jpg" alt="route" />
           </figure>
-          <Link to={'/categories'}>
-            <figure>
-              <img src="https://www.royalcaribbean.co.uk/assets/images/holiday-destinations/region-module/rccl_regionModule9.jpg" alt="route" />
-            </figure>
-          </Link>
-          <Link to={'/ships'}>
-            <figure>
-              <img src="https://images.cruisecritic.com/image/5441/image_1000x_43.jpg" alt="route" />
-            </figure>
-          </Link>
-          <Link to={'/categories'}>
-            <figure>
-              <img src="images/sign.jpg" alt="route" />
-            </figure>
-          </Link>
-        </div>
-      </container>
+        </Link>
+        <Link to={'/ships'}>
+          <figure>
+            <img src="https://images.cruisecritic.com/image/5441/image_1000x_43.jpg" alt="route" />
+          </figure>
+        </Link>
+        <Link to={'/cities'}>
+          <figure>
+            <img src="images/sign.jpg" alt="route" />
+          </figure>
+        </Link>
+      </div>
     </section>
   )
 }
