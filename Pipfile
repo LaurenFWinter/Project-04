@@ -10,6 +10,9 @@ flask = "*"
 pyjwt = "*"
 pony = "*"
 psycopg2 = "*"
+marshmallow = "*"
+psycopg2-binary = "*"
+bcrypt = "*"
 
 [requires]
 python_version = "3.7"
