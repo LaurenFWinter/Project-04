@@ -3,6 +3,7 @@
 .hero-image {
   background-size: cover;
   background-repeat: no-repeat;
+
 }
 
 .titlemax {
@@ -24,6 +25,7 @@
 p {
   font-family: 'Arima Madurai', cursive;
   font-size: 20px;
+  padding: 20px;
 }
 // flex borders on categories index
 .section {
@@ -82,13 +84,10 @@ imgship {
 //   max-height: 200px;
 }
 
-.herobody {
-  margin-bottom: 150px;
-}
 
 .padd1 {
-  padding-left: 70px;
-  padding-right: 70px;
+  padding: 70px;
+
 }
 
 .imgcategory {
@@ -97,4 +96,36 @@ imgship {
 
 .center {
     text-align: center;
+}
+
+
+.text1cont{
+  position: relative;
+  text-align: center;
+  color: white;
+}
+
+.text1 {
+  width: 25%;
+  position: absolute;
+  top: 50%;
+  left: 10%;
+  transform: translate(-50%, -50%);
+  font-family: 'Arima Madurai', cursive;
+  font-size: 40px;
+  color: black;
+}
+
+.flexinline {
+  display: inline-flex;
+  width:25%;
+  justify-content: center;
+  font-family: 'Arima Madurai', cursive;
+  font-size: 20px;
+  color: black;
+}
+
+form {
+  padding: 20px;
+  font-family: 'Arima Madurai', cursive;
 }

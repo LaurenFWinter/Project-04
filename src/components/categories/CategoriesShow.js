@@ -35,11 +35,9 @@ class CategoriesShow extends React.Component {
             <div key={cruise.id}>
               <div className="columns">
                 <div className="column">
-                  <Link to={'/cities/:id'}>
-                    <figure className="image">
-                      <img src={cruise.image} alt={name} />
-                    </figure>
-                  </Link>
+                  <figure className="image">
+                    <img src={cruise.image} alt={name} />
+                  </figure>
                 </div>
                 <div className="column">
 

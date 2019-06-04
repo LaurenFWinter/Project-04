@@ -91,7 +91,7 @@ class Register extends React.Component {
                     />
                   </div>
                 </div>
-                <button className="buttonNew">Submit</button>
+                <button className="is-light">Submit</button>
               </div>
             </div>
           </form>

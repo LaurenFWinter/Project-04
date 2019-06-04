@@ -21,21 +21,22 @@ class Index extends React.Component {
   render() {
     console.log(this.state.ships)
     return (
-      <section className="section">
-        <div className="container">
-          <figure className="image">
-            <img src='https://media.mnn.com/assets/images/2018/02/cruise-ship-sunset-ss.jpg.838x0_q80.jpg' alt='ship' />
-          </figure>
-          <h1 className="titlemax"> Find your perfect Cruise Ship.. </h1>
-          <div className="columns is-multiline">
-            {this.state.ships.map(ship =>
-              <div key={ship.id} className="column is-one-third-desktop">
-                <Link to={`/ships/${ship.id}`}>
-                  <ShipsCard {...ship} />
-                </Link>
-              </div>
-            )}
+      <section className="hero is-large">
+        <div className="hero-body hero-image herobody" style={{ backgroundImage: 'url(https://media.mnn.com/assets/images/2018/02/cruise-ship-sunset-ss.jpg.838x0_q80.jpg)'}}>
+          <div className="container">
+            <div>
+              <h1 className="title1">Find your perfect Cruise Ship..</h1>
+            </div>
           </div>
+        </div>
+        <div className="columns is-multiline padd1">
+          {this.state.ships.map(ship =>
+            <div key={ship.id} className="column is-one-third-desktop">
+              <Link to={`/ships/${ship.id}`}>
+                <ShipsCard {...ship} />
+              </Link>
+            </div>
+          )}
         </div>
       </section>
     )

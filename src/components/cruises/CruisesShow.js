@@ -52,29 +52,25 @@ class CruisesShow extends React.Component {
                   <img className="imgship" src={this.state.cruise.image} alt={name} />
                 </figure>
               </h1>
-
               <div className="columns">
                 <div className="column center">
                 </div>
               </div>
-
-
-
             </div>
-            <div className="column">
 
+
+            <div className="column">
               <h1 className="titlemax center">{this.state.cruise.name}</h1>
               <h3 className="subheading center">{this.state.cruise.region}</h3>
-              {this.state.cruise.city && <p>Ship Itinerary: {this.state.cruise.city.name}</p>}
+              {this.state.cruise.city && <p><strong>Ship Itinerary:</strong> {this.state.cruise.city.name}</p>}
               {this.state.cruise.ship &&
                 <span>
-                  <p>{this.state.cruise.ship.ship}</p>
+                  <p><strong>Ship Name:</strong> {this.state.cruise.ship.ship}</p>
                   <p>{this.state.cruise.ship.activities}</p>
                 </span>}
-
-                <div>
-                <p>{this.state.cruise.descriptionlong}</p>
-                </div>
+              <div>
+                <p><strong>Description:</strong> {this.state.cruise.descriptionlong}</p>
+              </div>
 
             </div>
           </div>

@@ -63,20 +63,24 @@ class Edit extends React.Component {
     if(!this.state.data && !this.state.ships.length) return null
     console.log(this.state.errors, 'state')
     return (
-      <section className="section">
-        <div className="container">
-          <div className="columns is-centered">
-            <div className="column is-half-desktop is-two-thirds-tablet">
-              <Form
-                handleChange={this.handleChange}
-                handleSubmit={this.handleSubmit}
-                data={this.state.data}
-                errors={this.state.errors}
-                ships={this.state.ships}
-              />
+      <section className="hero is-large">
+        <div className="hero-body hero-image herobody" style={{ backgroundImage: 'url(http://www.arubaports.com/main/wp-content/uploads/2013/12/about.jpg)'}}>
+          <div className="container">
+            <div>
+              <h1 className="title1">Update a Cruise Ship..</h1>
             </div>
           </div>
         </div>
+
+        <Form
+          handleChange={this.handleChange}
+          handleSubmit={this.handleSubmit}
+          data={this.state.data}
+          errors={this.state.errors}
+          ships={this.state.ships}
+        />
+
+
       </section>
     )
   }

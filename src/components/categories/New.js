@@ -51,20 +51,25 @@ class New extends React.Component {
   render() {
     if(!this.state.ships) return null
     return (
-      <section className="section">
-        <div className="container">
-          <div className="columns is-centered">
-            <div className="column is-half-desktop is-two-thirds-tablet">
-              <Form
-                handleChange={this.handleChange}
-                handleSubmit={this.handleSubmit}
-                data={this.state.data}
-                errors={this.state.errors}
-                ships={this.state.ships}
-              />
+
+      <section className="hero is-large">
+        <div className="hero-body hero-image herobody" style={{ backgroundImage: 'url(https://www.holidaywatchdog.com/img/resized/hero-main//locations/40346/604434896.jpg)'}}>
+          <div className="container">
+            <div>
+              <h1 className="title1">Make your own Cruise.. </h1>
             </div>
           </div>
         </div>
+
+
+        <Form
+          handleChange={this.handleChange}
+          handleSubmit={this.handleSubmit}
+          data={this.state.data}
+          errors={this.state.errors}
+          ships={this.state.ships}
+        />
+
       </section>
     )
   }
