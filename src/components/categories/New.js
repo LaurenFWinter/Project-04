@@ -31,10 +31,17 @@ class New extends React.Component {
     axios.post('/api/cruises', this.state.data, {
       headers: { 'Authorization': `Bearer ${token}` }
     })
-      .then(() => this.props.history.push('/wishlist'))
+      .then(() => this.props.history.push('/cruises'))
+  }
+
+  componentDidMount(){
+    axios.get('/api/ships')
+      .then(res => this.setState({ ships: res.data }))
+      .catch(err => console.error(err))
   }
 
   render() {
+    if(!this.state.ships) return null
     return (
       <section className="section">
         <div className="container">
@@ -45,6 +52,7 @@ class New extends React.Component {
                 handleSubmit={this.handleSubmit}
                 data={this.state.data}
                 errors={this.state.errors}
+                ships={this.state.ships}
               />
             </div>
           </div>

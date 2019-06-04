@@ -8,7 +8,7 @@ class CruisesShow extends React.Component {
     super(props)
 
     this.state = {
-      cruise: []
+      cruise: null
     }
 
   }
@@ -16,15 +16,12 @@ class CruisesShow extends React.Component {
   componentDidMount() {
     axios.get(`/api/cruises/${this.props.match.params.id}`)
       .then(res => this.setState({ cruise: res.data }))
+      .catch(err => console.error(err))
   }
 
 
   render() {
-    if(!this.state.cruise.ship) return null
-    console.log(this.state.cruise)
-    console.log(this.state.cruise.ship.ship, 'cruise.ship.ship')
-
-
+    if(!this.state.cruise) return null
 
     return (
       <section className="section">
@@ -38,9 +35,12 @@ class CruisesShow extends React.Component {
             <div className="column">
 
               <p>{this.state.cruise.name}</p>
-              <p>{this.state.cruise.ship.ship}</p>
-              <p>{this.state.cruise.ship.activities}</p>
-              <p>{this.state.cruise.city.name}</p>
+              {this.state.cruise.ship &&
+                <span>
+                  <p>{this.state.cruise.ship.ship}</p>
+                  <p>{this.state.cruise.ship.activities}</p>
+                </span>}
+              {this.state.cruise.city && <p>{this.state.cruise.city.name}</p>}
 
             </div>
 

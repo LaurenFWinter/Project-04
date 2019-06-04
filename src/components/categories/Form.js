@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Form = ({ handleChange, handleSubmit, data, errors }) => {
+const Form = ({ handleChange, handleSubmit, data, errors, ships }) => {
   return (
     <form onSubmit={handleSubmit}>
       <div className="field">
@@ -52,6 +52,17 @@ const Form = ({ handleChange, handleSubmit, data, errors }) => {
             />
           </div>
           {errors.descriptionshort && <div className="help is-danger">{errors.descriptionshort}</div>}
+        </div>
+
+        <div className="field">
+          <label className="label">Select a ship</label>
+          <div className="select">
+            <select name="ship_id" value={data.ship_id} onChange={handleChange}>
+              {ships.map(ship =>
+                <option key={ship.id} value={ship.id}>{ship.ship}</option>
+              )}
+            </select>
+          </div>
         </div>
       </div>
       <button className="buttonNew">Submit</button>
