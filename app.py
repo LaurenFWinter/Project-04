@@ -1,10 +1,10 @@
 from flask import Flask, jsonify
 from pony.orm import Database
 
-app = Flask(__name__)
+app = Flask(__name__, static_folder='public')
 db = Database()
+db.bind('postgres', db_uri)
 
-db.bind(provider='postgres', dbname='cruise')
 
 # pylint: disable=W0611,C0413
 from config import routes

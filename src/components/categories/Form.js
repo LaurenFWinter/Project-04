@@ -30,10 +30,9 @@ const Form = ({ handleChange, handleSubmit, data, errors }) => {
           <label className="label">Image</label>
           <div className="control">
             <input
-              id="form-Input"
               className="input"
               name="image"
-              placeholder="eg: www.cruiseship.com/ship"
+              placeholder="eg: https://secure.royalcaribbean.com/content/dam/royal/data/ports/key/key-west-florida-garden-party-parrot-jungle.jpg/jcr:content/renditions/375x200.jpg"
               onChange={handleChange}
               value={data.image || ''}
             />

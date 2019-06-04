@@ -18,7 +18,6 @@ import ShipsShow from './components/ships/ShipsShow'
 import CategoriesIndex from './components/categories/CategoriesIndex'
 import CategoriesShow from './components/categories/CategoriesShow'
 // import WishlistEdit from './components/categories/WishlistEdit'
-import Wishlist from './components/categories/Wishlist'
 import Loginpage from './components/common/LoginPage'
 import CruisesIndex from './components/cruises/CruisesIndex'
 import CruisesShow from './components/cruises/CruisesShow'
@@ -38,7 +37,6 @@ class App extends React.Component {
           <Navbar />
           <Switch>
             <Route path="/categories/new" component={New} />
-            <Route path="/categories/wishlist" component={Wishlist} />
             <Route path="/cruises/:id" component={CruisesShow} />
             <Route path="/categories/:id" component={CategoriesShow} />
             <Route path="/ships/:id" component={ShipsShow} />
