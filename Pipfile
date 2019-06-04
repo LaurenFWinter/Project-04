@@ -9,7 +9,6 @@ verify_ssl = true
 flask = "*"
 pyjwt = "*"
 pony = "*"
-psycopg2 = "*"
 marshmallow = "*"
 psycopg2-binary = "*"
 bcrypt = "*"
