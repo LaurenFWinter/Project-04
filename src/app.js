@@ -42,7 +42,7 @@ class App extends React.Component {
           <Switch>
             <Route path="/ships/:id/edit" component={ShipsEdit} />
             <Route path="/categories/:id/edit" component={WishlistEdit} />
-            <Route path="/categories/Wishlist" component={Wishlist} />
+            <Route path="/categories/wishlist" component={Wishlist} />
             <Route path="/cruises/:id" component={CruisesShow} />
             <Route path="/categories/:id" component={CategoriesShow} />
             <Route path="/ships/:id" component={ShipsShow} />

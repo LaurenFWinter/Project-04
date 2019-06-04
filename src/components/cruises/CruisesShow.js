@@ -25,17 +25,28 @@ class CruisesShow extends React.Component {
     console.log(this.state.cruise.ship.ship, 'cruise.ship.ship')
 
 
-    
+
     return (
       <section className="section">
         <div className="container">
-          <figure className="image">
-            <img className="imgship" src={this.state.cruise.image} alt={name} />
-          </figure>
-          <h3>{this.state.cruise.name}</h3>
-          <h3>{this.state.cruise.ship.ship}</h3>
-          <h3>{this.state.cruise.ship.activities}</h3>
-          <h3>{this.state.cruise.city.name}</h3>
+          <div className="columns">
+            <div className="column">
+              <figure className="image1">
+                <img className="imgship" src={this.state.cruise.image} alt={name} />
+              </figure>
+            </div>
+            <div className="column">
+
+              <p>{this.state.cruise.name}</p>
+              <p>{this.state.cruise.ship.ship}</p>
+              <p>{this.state.cruise.ship.activities}</p>
+              <p>{this.state.cruise.city.name}</p>
+
+            </div>
+
+          </div>
+
+
 
         </div>
       </section>
