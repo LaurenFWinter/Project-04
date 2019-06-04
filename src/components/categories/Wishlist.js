@@ -46,7 +46,7 @@ class Wishlist extends React.Component {
 
           <p><Link to={'/Loginpage'} className="button is-link is-outlined is-large">Home</Link></p>
           <br />
-          <p><Link to={'/'} className="button is-link is-outlined is-large">Make your Own Cruise</Link></p>
+          <p><Link to={'/categories/new'} className="button is-link is-outlined is-large">Make your Own Cruise</Link></p>
         </div>
       </section>
     )

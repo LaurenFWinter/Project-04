@@ -13,8 +13,8 @@ class Category(db.Entity):
 
 class CategorySchema(Schema):
     id = fields.Str(dump_only=True)
-    name = fields.Str(required=True)
-    image = fields.Str(required=True)
+    name = fields.Str(optional=True)
+    image = fields.Str(optional=True)
     cruises = fields.Nested('CruiseSchema', many=True, dump_only=True, exclude=('categories',))
     cruises_ids = fields.List(fields.Int(), load_only=True)
     ships = fields.Nested('ShipSchema', many=True, dump_only=True, exclude=('categories',))

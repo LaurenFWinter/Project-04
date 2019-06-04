@@ -8,5 +8,5 @@ class City(db.Entity):
 
 class CitySchema(Schema):
     id = fields.Str(dump_only=True)
-    name = fields.Str(required=True)
+    name = fields.Str(optional=True)
     cruise = fields.Nested('CruiseSchema', exclude=('city',))
