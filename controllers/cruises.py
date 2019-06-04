@@ -46,7 +46,7 @@ def show(cruise_id):
 
     return schema.dumps(cruise)
 
-
+# edit
 @router.route('/cruises/<int:cruise_id>', methods=['PUT'])
 @db_session
 def update(cruise_id):

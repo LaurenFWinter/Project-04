@@ -13,15 +13,14 @@ import CitiesShow from './components/cities/CitiesShow'
 
 import ShipsIndex from './components/ships/ShipsIndex'
 import ShipsShow from './components/ships/ShipsShow'
-// import ShipsEdit from './components/ships/ShipsEdit'
 
 import CategoriesIndex from './components/categories/CategoriesIndex'
 import CategoriesShow from './components/categories/CategoriesShow'
-// import WishlistEdit from './components/categories/WishlistEdit'
 import Loginpage from './components/common/Loginpage'
 import CruisesIndex from './components/cruises/CruisesIndex'
 import CruisesShow from './components/cruises/CruisesShow'
 import New from './components/categories/New'
+import Edit from './components/categories/Edit'
 
 
 
@@ -36,7 +35,8 @@ class App extends React.Component {
         <div>
           <Navbar />
           <Switch>
-            <Route path="/categories/new" component={New} />
+            <Route path="/cruises/:id/edit" component={Edit} />
+            <Route path="/cruises/new" component={New} />
             <Route path="/cruises/:id" component={CruisesShow} />
             <Route path="/categories/:id" component={CategoriesShow} />
             <Route path="/ships/:id" component={ShipsShow} />

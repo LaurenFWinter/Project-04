@@ -11,6 +11,7 @@ const Form = ({ handleChange, handleSubmit, data, errors, ships }) => {
             name="name"
             placeholder="eg: Thailand & Vietnam"
             onChange={handleChange}
+            value={data.name}
           />
         </div>
         {errors.name && <div className="help is-danger">{errors.name}</div>}
@@ -23,6 +24,7 @@ const Form = ({ handleChange, handleSubmit, data, errors, ships }) => {
             name="region"
             placeholder="eg: Thailand"
             onChange={handleChange}
+            value={data.region}
           />
         </div>
         {errors.region && <div className="help is-danger">{errors.region}</div>}
@@ -58,6 +60,7 @@ const Form = ({ handleChange, handleSubmit, data, errors, ships }) => {
           <label className="label">Select a ship</label>
           <div className="select">
             <select name="ship_id" value={data.ship_id} onChange={handleChange}>
+              <option value={0}>Please select a ship...</option>
               {ships.map(ship =>
                 <option key={ship.id} value={ship.id}>{ship.ship}</option>
               )}

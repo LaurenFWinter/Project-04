@@ -10,12 +10,25 @@ class New extends React.Component {
     super()
 
     this.state = {
-      data: {},
-      errors: {}
+      data: {
+        name: '',
+        region: '',
+        image: '',
+        descriptionshort: '',
+        ship_id: 0
+      },
+      errors: ''
     }
 
     this.handleChange = this.handleChange.bind(this)
     this.handleSubmit = this.handleSubmit.bind(this)
+  }
+
+  componentDidMount(){
+    axios.get('/api/ships')
+      .then(res => this.setState({ ships: res.data }))
+      .catch(err => console.error(err.message))
+
   }
 
   handleChange(e) {
@@ -32,11 +45,6 @@ class New extends React.Component {
       headers: { 'Authorization': `Bearer ${token}` }
     })
       .then(() => this.props.history.push('/cruises'))
-  }
-
-  componentDidMount(){
-    axios.get('/api/ships')
-      .then(res => this.setState({ ships: res.data }))
       .catch(err => console.error(err))
   }
 

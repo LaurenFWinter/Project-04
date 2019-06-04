@@ -1,5 +1,8 @@
 import React from 'react'
 import axios from 'axios'
+import { Link } from 'react-router-dom'
+import Auth from '../../lib/Auth'
+
 
 
 class CruisesShow extends React.Component {
@@ -19,6 +22,18 @@ class CruisesShow extends React.Component {
       .catch(err => console.error(err))
   }
 
+  handleDelete() {
+    const token = Auth.getToken()
+    axios.delete(`/api/cruises/${this.props.match.params.id}`, {
+      headers: { 'Authorization': `Bearer ${token}` }
+    })
+      .then(() => this.props.history.push('/cruises'))
+  }
+
+  canModify() {
+    return Auth.isAuthenticated() && Auth.getPayload().sub === this.state.cruise.createdBy._id
+  }
+
 
   render() {
     if(!this.state.cruise) return null
@@ -28,6 +43,10 @@ class CruisesShow extends React.Component {
         <div className="container">
           <div className="columns">
             <div className="column">
+              <Link to={`/cruises/${this.state.cruise.id}/edit`} className="button is-primary">Edit</Link>
+              <button className="button is-danger" onClick={this.handleDelete}>Delete</button>
+
+
               <figure className="image1">
                 <img className="imgship" src={this.state.cruise.image} alt={name} />
               </figure>
@@ -43,16 +62,13 @@ class CruisesShow extends React.Component {
               {this.state.cruise.city && <p>{this.state.cruise.city.name}</p>}
 
             </div>
-
           </div>
-
-
 
         </div>
       </section>
     )
   }
-}
 
+}
 
 export default CruisesShow
