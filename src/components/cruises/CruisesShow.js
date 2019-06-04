@@ -40,31 +40,47 @@ class CruisesShow extends React.Component {
 
     return (
       <section className="section">
+
+
         <div className="container">
-          <div className="columns">
-            <div className="column">
-              <Link to={`/cruises/${this.state.cruise.id}/edit`} className="button is-primary">Edit</Link>
-              <button className="button is-danger" onClick={this.handleDelete}>Delete</button>
+          <div className="hero-body">
+            <div className="container">
+              <Link to={`/cruises/${this.state.cruise.id}/edit`} className="button is-light">Edit</Link>
+              <button className="button is-light" onClick={this.handleDelete}>Delete</button>
+              <h1 className="title">
+                <figure className="imgcategory">
+                  <img className="imgship" src={this.state.cruise.image} alt={name} />
+                </figure>
+              </h1>
+
+              <div className="columns">
+                <div className="column center">
+                </div>
+              </div>
 
 
-              <figure className="image1">
-                <img className="imgship" src={this.state.cruise.image} alt={name} />
-              </figure>
+
             </div>
             <div className="column">
 
-              <p>{this.state.cruise.name}</p>
+              <h1 className="titlemax center">{this.state.cruise.name}</h1>
+              <h3 className="subheading center">{this.state.cruise.region}</h3>
+              {this.state.cruise.city && <p>Ship Itinerary: {this.state.cruise.city.name}</p>}
               {this.state.cruise.ship &&
                 <span>
                   <p>{this.state.cruise.ship.ship}</p>
                   <p>{this.state.cruise.ship.activities}</p>
                 </span>}
-              {this.state.cruise.city && <p>{this.state.cruise.city.name}</p>}
+
+                <div>
+                <p>{this.state.cruise.descriptionlong}</p>
+                </div>
 
             </div>
           </div>
 
         </div>
+
       </section>
     )
   }
