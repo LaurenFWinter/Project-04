@@ -9,9 +9,12 @@ verify_ssl = true
 flask = "*"
 pyjwt = "*"
 pony = "*"
-marshmallow = "*"
 psycopg2-binary = "*"
 bcrypt = "*"
+marshmallow = "*"
 
 [requires]
 python_version = "3.7"
+
+[pipenv]
+allow_prereleases = true
