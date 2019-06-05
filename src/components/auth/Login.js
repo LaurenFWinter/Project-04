@@ -37,19 +37,22 @@ class Login extends React.Component {
   render() {
     console.log(this.state)
     return (
-      <section className="section, login">
+      <section className="section">
         <div className="container">
-          <div className="columns is-centered">
-            <div className="column is-half-desktop is-two-thirds-tablet">
-              <form onSubmit={this.handleSubmit}>
+          <form className="register" onSubmit={this.handleSubmit}>
+            <h2 className="titlemax">Login </h2>
+
+            <div className="columns">
+              <div className="column">
                 <div className="field">
                   <label className="label">Email</label>
                   <div className="control">
                     <input
                       className="input"
                       name="email"
-                      placeholder="eg: mrsjones@gmail.com"
+                      placeholder="mrsjones@gmail.com"
                       onChange={this.handleChange}
+                      value={this.state.data.email}
                     />
                   </div>
                 </div>
@@ -62,20 +65,17 @@ class Login extends React.Component {
                       type="password"
                       placeholder="eg: ••••••••"
                       onChange={this.handleChange}
+                      value={this.state.data.password}
                     />
                   </div>
-
-                  {this.state.error && <div className="help is-danger">{this.state.error}</div>}
                 </div>
-
-                <button className="button is-light">Submit</button>
-              </form>
+                <button className="is-light">Submit</button>
+              </div>
             </div>
-          </div>
+          </form>
         </div>
       </section>
     )
   }
 }
-
 export default Login

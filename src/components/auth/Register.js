@@ -37,7 +37,7 @@ class Register extends React.Component {
       <section className="section">
         <div className="container">
           <form className="register" onSubmit={this.handleSubmit}>
-            <h2 className="title">Register </h2>
+            <h2 className="titlemax">Register </h2>
 
             <div className="columns">
               <div className="column">
