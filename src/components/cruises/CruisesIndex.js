@@ -26,7 +26,7 @@ class CruisesIndex extends React.Component {
         <div className="hero-body hero-image herobody" style={{ backgroundImage: 'url(../images/cruise-index-image.jpg)'}}>
           <div className="container">
             <div>
-              <h1 className="title1">Find your perfect Cruise..</h1>
+              <h1 className="title1">Voyage. Cruises</h1>
             </div>
           </div>
         </div>

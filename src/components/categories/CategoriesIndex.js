@@ -25,8 +25,7 @@ class Index extends React.Component {
         <div className="hero-body hero-image" style={{ backgroundImage: 'url(https://www.virginholidays.co.uk/.imaging/Phone/dam/d045c975-c6fc-4768-b59d-576052da215a.jpg)' }}>
           <div className="container">
             <div>
-              <h1 className="title1">Our Destinations</h1>
-              <h1 className="title2">Find your perfect cruise</h1>
+              <h1 className="title1">Voyage. Destinations</h1>
             </div>
           </div>
         </div>
