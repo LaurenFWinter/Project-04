@@ -62,12 +62,7 @@ class CruisesShow extends React.Component {
             <div className="column">
               <h1 className="titlemax center">{this.state.cruise.name}</h1>
               <h3 className="subheading center">{this.state.cruise.region}</h3>
-              {this.state.cruise.city && <p><strong>Ship Itinerary:</strong> {this.state.cruise.city.name}</p>}
-              {this.state.cruise.ship &&
-                <span>
-                  <p><strong>Ship Name:</strong> {this.state.cruise.ship.ship}</p>
-                  <p>{this.state.cruise.ship.activities}</p>
-                </span>}
+              {this.state.cruise.city && <p><strong>Itinerary:</strong> {this.state.cruise.city.name}</p>}
               <div>
                 <p><strong>Description:</strong> {this.state.cruise.descriptionshort} && {this.state.cruise.descriptionlong}</p>
               </div>
