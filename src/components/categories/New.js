@@ -56,7 +56,7 @@ class New extends React.Component {
         <div className="hero-body hero-image herobody" style={{ backgroundImage: 'url(https://www.holidaywatchdog.com/img/resized/hero-main//locations/40346/604434896.jpg)'}}>
           <div className="container">
             <div>
-              <h1 className="title1">Make your own Cruise.. </h1>
+              <h1 className="title1">Voyage. Make your own Cruise </h1>
             </div>
           </div>
         </div>
