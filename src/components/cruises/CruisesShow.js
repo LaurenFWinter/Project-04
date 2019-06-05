@@ -69,7 +69,7 @@ class CruisesShow extends React.Component {
                   <p>{this.state.cruise.ship.activities}</p>
                 </span>}
               <div>
-                <p><strong>Description:</strong> {this.state.cruise.descriptionlong}</p>
+                <p><strong>Description:</strong> {this.state.cruise.descriptionshort} && {this.state.cruise.descriptionlong}</p>
               </div>
 
             </div>
