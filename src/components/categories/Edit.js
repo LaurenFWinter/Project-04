@@ -67,7 +67,7 @@ class Edit extends React.Component {
         <div className="hero-body hero-image herobody" style={{ backgroundImage: 'url(http://www.arubaports.com/main/wp-content/uploads/2013/12/about.jpg)'}}>
           <div className="container">
             <div>
-              <h1 className="title1">Update a Cruise Ship..</h1>
+              <h1 className="title1">Voyage. Edit a Cruise Ship..</h1>
             </div>
           </div>
         </div>
